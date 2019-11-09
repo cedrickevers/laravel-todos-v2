@@ -1,6 +1,10 @@
  @extends("layouts.app")
 
 
+@section("title")
+Détail de la liste : {{ $todo->name }}
+
+@endsection()
  @section("content")
  <div class="row">
     <div class="col-md-6 justify-content-center">

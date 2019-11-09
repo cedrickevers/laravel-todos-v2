@@ -1,5 +1,10 @@
  @extends ("layouts.app")
 
+ @section("title")
+    Todo liste
+    @endsection()
+
+
  @section("content")
 
  <div class="row justify-content-center">
