@@ -33,6 +33,7 @@ Route::post("store-todos", "todosController@store");
 Route::get("todos/{todo}/edit", "TodosController@edit");
 Route::post("todos/{todo}/update-todos", "TodosController@update");
 
+Route::get ("todos/{todos}/complete", "TodosController@complete");
 
 
 

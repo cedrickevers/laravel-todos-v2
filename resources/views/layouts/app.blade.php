@@ -21,11 +21,18 @@
                     <a class="nav-item nav-link active" href="/">accueil <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link active" href="/todos">Todo list <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link active" href="/new-todos">Creer une liste  <span class="sr-only">(current)</span></a>
-
-
                   </div>
                 </div>
               </nav>
+              <div class="container">
+                  @if(session()->has("success"))
+                  <div class="alert alert-success">
+                    {{ session()->get("success")}}
+                  </div>
+
+                  @endif()
+              </div>
+
     @yield("content")
 </div>
 
