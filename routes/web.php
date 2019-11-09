@@ -11,16 +11,29 @@
 |
 */
 
+use App\Http\Controllers\TodosController;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("about", "AboutController@index");
 
 Route::get("todos", "todosController@index");
 
 Route::get("todos/{todo}", "todosController@show");
 
 Route::get("new-todos", "todosController@create");
+
+
+Route::get("todos/{todo}/delete", "todosController@delete");
+
+
 Route::post("store-todos", "todosController@store");
+
+Route::get("todos/{todo}/edit", "TodosController@edit");
+Route::post("todos/{todo}/update-todos", "TodosController@update");
+
+
+
+
 

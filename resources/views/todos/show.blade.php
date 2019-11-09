@@ -20,7 +20,11 @@ Détail de la liste : {{ $todo->name }}
         <div class="card-body">
         {{$todo->name}} <br>
        <p  class="my-2"> {{ $todo->description}}<p>
+       <a href="/todos/{{ $todo->id}}/edit" class="btn Btn-info bg-light">Editer</a>
+       <a href="/todos/{{ $todo->id}}/delete" class="btn Btn-danger text-white" >Supprimer </a>
+
         </div>
+
     </div>
     </div>
 </div>
