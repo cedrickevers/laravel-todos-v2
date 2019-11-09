@@ -19,7 +19,8 @@
 <ul class="list-group  ">
 
 @foreach($todos as $todo)
-    <li class="list-group-item bg-red">{{$todo->name}}</li>
+    <li class="list-group-item bg-red">{{$todo->name}} <a href="/todos/{{ $todo->id }}"class="btn btn-primary float-right">View</a>
+</li>
 
 @endforeach
 </ul>
