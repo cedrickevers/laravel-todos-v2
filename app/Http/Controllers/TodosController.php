@@ -10,10 +10,10 @@ class TodosController extends Controller
          return view("todos.index")->with("todos", Todo::all());
     }
 
-    public function show($todoId)
+    public function show(Todo $todo)
     {
 
-        return view("todos.show")->with("todo", Todo::find($todoId));
+        return view("todos.show")->with("todo", $todo);
     }
 
     public function  create()
@@ -39,10 +39,9 @@ class TodosController extends Controller
         return redirect("/todos");
     }
 
-    public function edit($todoId) {
+    public function edit( Todo $todo) {
 
-        $todo = Todo::find($todoId);
-        return view("todos.edit")->with("todo", $todo);
+         return view("todos.edit")->with("todo", $todo);
 
     }
 
@@ -66,8 +65,7 @@ class TodosController extends Controller
 
     }
 
-    public function delete($todoId) {
-        $todo = Todo::find($todoId);
+    public function delete(Todo $todo) {
 
         $todo->delete();
 
